@@ -21,7 +21,7 @@ export function Hero() {
         <h1 className="mx-auto max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-6xl">
           UI가 아니라,
           <br />
-          <span className="text-zinc-500">완성된 기능</span>을 설치하세요.
+          <span className="text-zinc-500">완성된 준판판</span>을 설치하세요.
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-balance text-base leading-relaxed text-zinc-400 sm:text-lg">
