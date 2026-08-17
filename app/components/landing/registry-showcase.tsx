@@ -54,55 +54,55 @@ const BLOCKS = [
 
 export function RegistryShowcase() {
   return (
-    <section id="registry" className="border-t border-white/10 py-24">
+    <section id="registry" className="border-t border-border py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <div>
-            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-title-2 tracking-tight text-foreground">
               레지스트리 둘러보기
             </h2>
-            <p className="mt-3 max-w-xl text-zinc-400">
+            <p className="mt-text-sm max-w-xl text-muted-foreground">
               120개 이상의 풀스택 블록. 필요한 기능을 찾아 명령어 한 줄로
               설치하세요.
             </p>
           </div>
           <a
             href="#"
-            className="shrink-0 rounded-md border border-white/15 px-4 py-2 text-sm text-zinc-200 transition-colors hover:border-white/30 hover:bg-white/5"
+            className="shrink-0 rounded-md border border-border px-4 py-2 text-label-md text-foreground transition-colors hover:border-foreground/25 hover:bg-foreground/5"
           >
             전체 컴포넌트 보기
           </a>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-section-md grid grid-cols-1 gap-grid-gutter-x sm:grid-cols-2 lg:grid-cols-3">
           {BLOCKS.map((block) => (
             <div
               key={block.slug}
-              className="group flex flex-col rounded-xl border border-white/10 bg-zinc-900/40 p-6 transition-colors hover:border-white/25 hover:bg-zinc-900"
+              className="group flex flex-col rounded-xl border border-border bg-card/40 p-6 transition-colors hover:border-foreground/25 hover:bg-card"
             >
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5">
-                <block.icon className="h-4.5 w-4.5 text-zinc-300" />
+              <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-foreground/5">
+                <block.icon className="h-4.5 w-4.5 text-muted-foreground" />
               </span>
-              <h3 className="mt-4 text-[15px] font-medium text-white">
+              <h3 className="mt-4 text-title-3 text-foreground">
                 {block.title}
               </h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-zinc-500">
+              <p className="mt-text-sm text-body-sm text-muted-foreground">
                 {block.description}
               </p>
 
-              <div className="mt-4 flex flex-wrap gap-1.5">
+              <div className="mt-4 flex flex-wrap gap-inline-md">
                 {block.stack.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[11px] text-zinc-400"
+                    className="rounded-full border border-border bg-foreground/5 px-2 py-0.5 text-caption text-muted-foreground"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
 
-              <div className="mt-5 flex items-center gap-2 rounded-md border border-white/10 bg-black/40 px-3 py-2 font-mono text-xs text-zinc-400">
-                <span className="text-emerald-400">$</span>
+              <div className="mt-5 flex items-center gap-inline-sm rounded-md border border-border bg-background px-3 py-2 font-mono text-xs text-muted-foreground">
+                <span className="text-secondary-400">$</span>
                 npx claudecode-practice add {block.slug}
               </div>
             </div>

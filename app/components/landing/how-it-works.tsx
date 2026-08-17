@@ -21,31 +21,31 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="border-t border-white/10 py-24">
+    <section id="how-it-works" className="border-t border-border py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="text-title-2 tracking-tight text-foreground">
             사용 방법은 간단합니다
           </h2>
-          <p className="mt-4 text-zinc-400">
+          <p className="mt-text-sm text-muted-foreground">
             설정 파일도, 복잡한 온보딩도 없습니다. 세 단계면 충분합니다.
           </p>
         </div>
 
-        <div className="relative mt-16 grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-6">
+        <div className="relative mt-section-md grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-6">
           <div
             aria-hidden
-            className="absolute left-0 right-0 top-5 hidden h-px bg-white/10 sm:block"
+            className="absolute left-0 right-0 top-5 hidden h-px bg-border sm:block"
           />
           {STEPS.map((step) => (
             <div key={step.number} className="relative text-center">
-              <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-zinc-950 font-mono text-sm text-zinc-300">
+              <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background font-mono text-caption text-muted-foreground">
                 {step.number}
               </div>
-              <h3 className="mt-5 text-[15px] font-medium text-white">
+              <h3 className="mt-5 text-title-3 text-foreground">
                 {step.title}
               </h3>
-              <p className="mx-auto mt-2 max-w-xs text-sm leading-relaxed text-zinc-500">
+              <p className="mx-auto mt-text-sm max-w-xs text-body-sm text-muted-foreground">
                 {step.description}
               </p>
             </div>

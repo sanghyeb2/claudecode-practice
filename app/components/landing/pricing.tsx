@@ -31,42 +31,42 @@ const PLANS = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="border-t border-white/10 py-24">
+    <section id="pricing" className="border-t border-border py-section-lg">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="text-title-2 tracking-tight text-foreground">
             심플한 가격 정책
           </h2>
-          <p className="mt-4 text-zinc-400">
+          <p className="mt-text-sm text-muted-foreground">
             핵심 레지스트리는 언제나 무료입니다. 팀에는 Pro를 추천해요.
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="mx-auto mt-section-md grid max-w-layout-md grid-cols-1 gap-grid-gutter-x sm:grid-cols-2">
           {PLANS.map((plan) => (
             <div
               key={plan.name}
               className={`rounded-xl border p-8 ${
                 plan.highlighted
-                  ? "border-white/20 bg-zinc-900"
-                  : "border-white/10 bg-zinc-900/40"
+                  ? "border-foreground/20 bg-card"
+                  : "border-border bg-card/40"
               }`}
             >
-              <h3 className="text-sm font-medium text-zinc-300">
+              <h3 className="text-title-3 text-muted-foreground">
                 {plan.name}
               </h3>
-              <div className="mt-3 text-3xl font-semibold tracking-tight text-white">
+              <div className="mt-3 text-3xl font-semibold tracking-tight text-foreground">
                 {plan.price}
               </div>
-              <p className="mt-2 text-sm text-zinc-500">{plan.description}</p>
+              <p className="mt-text-sm text-body-sm text-muted-foreground">{plan.description}</p>
 
               <ul className="mt-6 space-y-3">
                 {plan.features.map((feature) => (
                   <li
                     key={feature}
-                    className="flex items-start gap-2 text-sm text-zinc-400"
+                    className="flex items-start gap-inline-sm text-body-sm text-muted-foreground"
                   >
-                    <IconCheck className="mt-0.5 h-4 w-4 shrink-0 text-zinc-500" />
+                    <IconCheck className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
                     {feature}
                   </li>
                 ))}
@@ -74,10 +74,10 @@ export function Pricing() {
 
               <a
                 href="#"
-                className={`mt-8 block rounded-md px-4 py-2.5 text-center text-sm font-medium transition-colors ${
+                className={`mt-field-lg block rounded-md px-4 py-2.5 text-center text-label-lg transition-colors ${
                   plan.highlighted
-                    ? "bg-white text-zinc-950 hover:bg-zinc-200"
-                    : "border border-white/15 text-zinc-200 hover:border-white/30 hover:bg-white/5"
+                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                    : "border border-border text-foreground hover:border-foreground/25 hover:bg-foreground/5"
                 }`}
               >
                 {plan.cta}

@@ -48,29 +48,29 @@ const FEATURES = [
 
 export function Features() {
   return (
-    <section id="features" className="border-t border-white/10 py-24">
+    <section id="features" className="border-t border-border py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="text-title-2 tracking-tight text-foreground">
             프론트엔드 레지스트리, 그 다음 단계
           </h2>
-          <p className="mt-4 text-zinc-400">
+          <p className="mt-text-sm text-muted-foreground">
             컴포넌트 라이브러리는 UI만 줍니다. CLAUDECODE-PRACTICE는 기능
             하나가 동작하는 데 필요한 전체 스택을 함께 드립니다.
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-section-md grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((feature) => (
             <div
               key={feature.title}
-              className="group bg-zinc-950 p-8 transition-colors hover:bg-zinc-900/60"
+              className="group bg-background p-8 transition-colors hover:bg-card/60"
             >
-              <feature.icon className="h-5 w-5 text-zinc-500 transition-colors group-hover:text-white" />
-              <h3 className="mt-4 text-[15px] font-medium text-white">
+              <feature.icon className="h-5 w-5 text-muted-foreground transition-colors group-hover:text-foreground" />
+              <h3 className="mt-4 text-title-3 text-foreground">
                 {feature.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-zinc-500">
+              <p className="mt-text-sm text-body-sm text-muted-foreground">
                 {feature.description}
               </p>
             </div>

@@ -7,15 +7,15 @@ const STATS = [
 
 export function Stats() {
   return (
-    <section className="border-t border-white/10 py-16">
+    <section className="border-t border-border py-section-lg">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-grid-gutter-x sm:grid-cols-4">
           {STATS.map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              <div className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                 {stat.value}
               </div>
-              <div className="mt-1.5 text-sm text-zinc-500">{stat.label}</div>
+              <div className="mt-1.5 text-body-sm text-muted-foreground">{stat.label}</div>
             </div>
           ))}
         </div>

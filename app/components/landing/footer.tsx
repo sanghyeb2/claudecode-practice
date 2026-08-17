@@ -17,26 +17,26 @@ const FOOTER_LINKS = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 py-16">
+    <footer className="border-t border-border py-section-lg">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-grid-gutter-x sm:grid-cols-4">
           <div className="col-span-2 sm:col-span-1">
-            <div className="flex items-center gap-2">
-              <span className="flex h-7 w-7 items-center justify-center rounded-md border border-white/15 bg-white/5">
-                <IconTerminal className="h-4 w-4 text-white" />
+            <div className="flex items-center gap-inline-sm">
+              <span className="flex h-7 w-7 items-center justify-center rounded-md border border-border bg-foreground/5">
+                <IconTerminal className="h-4 w-4 text-foreground" />
               </span>
-              <span className="font-mono text-sm font-semibold text-white">
+              <span className="font-mono text-sm font-semibold text-foreground">
                 claudecode-practice
               </span>
             </div>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-500">
+            <p className="mt-3 text-body-sm text-muted-foreground">
               풀스택 기능을 위한 오픈소스 컴포넌트 레지스트리.
             </p>
           </div>
 
           {FOOTER_LINKS.map((group) => (
             <div key={group.heading}>
-              <h4 className="text-sm font-medium text-white">
+              <h4 className="text-sm font-medium text-foreground">
                 {group.heading}
               </h4>
               <ul className="mt-4 space-y-2.5">
@@ -44,7 +44,7 @@ export function Footer() {
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-sm text-zinc-500 transition-colors hover:text-zinc-200"
+                      className="text-label-md text-muted-foreground transition-colors hover:text-foreground"
                     >
                       {link}
                     </a>
@@ -55,13 +55,13 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
-          <p className="text-sm text-zinc-600">
+        <div className="mt-section-md flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
+          <p className="text-caption text-tertiary">
             © 2026 CLAUDECODE-PRACTICE. MIT 라이선스로 배포됩니다.
           </p>
           <a
             href="#"
-            className="text-zinc-500 transition-colors hover:text-white"
+            className="text-muted-foreground transition-colors hover:text-foreground"
             aria-label="GitHub"
           >
             <IconGithub className="h-5 w-5" />
