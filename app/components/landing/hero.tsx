@@ -19,9 +19,9 @@ export function Hero() {
         </div>
 
         <h1 className="mx-auto max-w-3xl text-display-lg tracking-tight text-foreground">
-          UI가 아니라,
+          외노자 백수 크루
           <br />
-          <span className="text-muted-foreground">완성된 준판판</span>을 설치하세요.
+          <span className="text-muted-foreground">크루장 준판판</span>에게 문의하세요.
         </h1>
 
         <p className="mx-auto mt-text-sm max-w-2xl text-balance text-body-lg text-muted-foreground">
