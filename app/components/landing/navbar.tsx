@@ -3,6 +3,7 @@ import { IconGithub, IconStar, IconTerminal } from "./icons";
 import { ThemeToggle } from "./theme-toggle";
 
 const NAV_LINKS = [
+  { label: "기능 목록", href: "/features" },
   { label: "컴포넌트", href: "#registry" },
   { label: "기능", href: "#features" },
   { label: "사용법", href: "#how-it-works" },
@@ -24,13 +25,13 @@ export function Navbar() {
 
         <nav className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-label-md text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
