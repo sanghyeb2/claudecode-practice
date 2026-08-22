@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
+import { FeatureForm } from "@/app/components/features/feature-form";
 import featuresData from "@/data/features.json";
 
 const CATEGORIES = [...new Set(featuresData.map((feature) => feature.category))];
-
-const FIELD_CLASS =
-  "rounded-md border border-input bg-background px-inline-md py-field-sm text-body-md text-foreground placeholder:text-tertiary focus:border-ring focus:outline-none";
 
 export const metadata: Metadata = {
   title: "기능 관리 — CLAUDECODE-PRACTICE",
@@ -28,79 +26,7 @@ export default function FeaturesPage() {
           새 기능 등록
         </h2>
 
-        <form className="mt-text-sm flex max-w-layout-sm flex-col gap-field-md">
-          <div className="flex flex-col gap-field-sm">
-            <label htmlFor="name" className="text-label-md text-foreground">
-              기능 이름
-            </label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              placeholder="예: 카카오 로그인"
-              className={FIELD_CLASS}
-            />
-          </div>
-
-          <div className="flex flex-col gap-field-sm">
-            <label
-              htmlFor="description"
-              className="text-label-md text-foreground"
-            >
-              한 줄 설명
-            </label>
-            <input
-              id="description"
-              name="description"
-              type="text"
-              placeholder="예: 카카오 계정으로 클릭 한 번에 로그인하는 소셜 로그인"
-              className={FIELD_CLASS}
-            />
-          </div>
-
-          <div className="flex flex-col gap-field-sm">
-            <label htmlFor="category" className="text-label-md text-foreground">
-              카테고리
-            </label>
-            <select
-              id="category"
-              name="category"
-              defaultValue=""
-              className={FIELD_CLASS}
-            >
-              <option value="" disabled>
-                카테고리를 선택하세요
-              </option>
-              {CATEGORIES.map((category) => (
-                <option key={category} value={category}>
-                  {category}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div className="flex flex-col gap-field-sm">
-            <label htmlFor="price" className="text-label-md text-foreground">
-              가격 (원)
-            </label>
-            <input
-              id="price"
-              name="price"
-              type="number"
-              inputMode="numeric"
-              min={0}
-              placeholder="9990"
-              className={FIELD_CLASS}
-            />
-          </div>
-
-          <button
-            type="button"
-            className="mt-field-lg rounded-md bg-primary px-inline-md py-field-sm text-label-lg text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            등록하기
-          </button>
-        </form>
+        <FeatureForm categories={CATEGORIES} />
       </section>
     </>
   );
